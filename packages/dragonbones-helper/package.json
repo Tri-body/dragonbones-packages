@@ -1,0 +1,27 @@
+{
+  "name": "@gnoijli/dragonbones-helper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf ./build && tsc -p .",
+    "prepare": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "typescript": "^4.2.4",
+    "dragonbones-converter": "^1.0.2",
+    "dragonbonesjs-module": "^1.0.1",
+    "jszip": "^3.6.0",
+    "tslib": "^2.2.0"
+  },
+  "peerDependencies": {
+    "dragonbones-converter": "^1.0.2",
+    "dragonbonesjs-module": "^1.0.1",
+    "jszip": "^3.6.0",
+    "tslib": "^2.2.0"
+  }
+}

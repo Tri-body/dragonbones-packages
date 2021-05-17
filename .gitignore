@@ -1,0 +1,20 @@
+# IntelliJ
+.idea
+
+# Node.js
+node_modules
+
+# build
+dist
+build
+
+# OSX
+.DS_Store
+
+# Visual Studio
+.vs
+.vscode
+
+*.log
+
+package-lock.json
