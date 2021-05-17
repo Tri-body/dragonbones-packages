@@ -19,5 +19,8 @@
   "dependencies": {
     "@gnoijli/dragonbones-helper": "^1.0.0",
     "pixi.js": "^4.8.9"
+  },
+  "peerDependencies": {
+    "pixi.js": "^4.8.9"
   }
 }
