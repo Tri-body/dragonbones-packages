@@ -1,7 +1,7 @@
 {
   "name": "@gnoijli/dragonbones-helper",
   "version": "1.0.0",
-  "description": "",
+  "description": "load and parse dragonbones zip file library",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
