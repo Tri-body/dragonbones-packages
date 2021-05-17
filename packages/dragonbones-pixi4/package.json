@@ -2,25 +2,30 @@
   "name": "@gnoijli/dragonbones-pixi4",
   "version": "1.0.0",
   "description": "dragonbones render by pixi.js v4",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "rimraf ./build && tsc -p .",
     "prepare": "npm run build"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["dragonbones", "pixi"],
+  "author": "gnoijli <gnoijli@gmail.com>",
+  "homepage": "https://github.com/Tri-body/dragonbones-packages#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tri-body/dragonbones-packages.git"
+  },
   "license": "MIT",
   "devDependencies": {
+    "@gnoijli/dragonbones-helper": "^1.0.0",
     "@types/pixi.js": "^4.8.9",
     "rimraf": "^3.0.2",
-    "typescript": "^4.2.4"
-  },
-  "dependencies": {
-    "@gnoijli/dragonbones-helper": "^1.0.0",
-    "pixi.js": "^4.8.9"
+    "typescript": "^4.2.4",
+    "pixi.js": "^4.8.9",
+    "tslib": "^2.2.0"
   },
   "peerDependencies": {
-    "pixi.js": "^4.8.9"
+    "pixi.js": "^4.8.9",
+    "tslib": "^2.2.0"
   }
 }
