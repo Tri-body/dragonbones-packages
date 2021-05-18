@@ -1,7 +1,7 @@
 {
   "name": "@gnoijli/dragonbones-react",
-  "version": "1.0.0",
-  "description": "react compoent for show dragonbones, render by pixi",
+  "version": "1.0.1",
+  "description": "react component for show dragonbones, render by pixi",
   "author": "gnoijli <gnoijli@gmail.com>",
   "homepage": "https://github.com/Tri-body/dragonbones-packages#readme",
   "keywords": [
