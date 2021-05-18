@@ -8,9 +8,7 @@ async function start() {
   for (let i = 0; i < 1; i++) {
     const movie = item.createMovie('Dragon')
     movie.curtMovement = 'walk'
-    movie.fitSize(300, 300, false)
-    movie.display.x = 150
-    movie.display.y = 150
+    movie.fitSize(300, 300, 150, 150)
     const app = new PIXI.Application({
       transparent: true,
       width: 300,

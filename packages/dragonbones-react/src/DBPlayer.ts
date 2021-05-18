@@ -15,9 +15,10 @@ export class DBPlayer {
   private _loading = false
   private _item: PixiSkItem
 
-  constructor(parent: HTMLElement, props: IProps) {
+  constructor(props: IProps) {
     const forceCanvas = props.renderer === 'canvas' ? true : false
     this._app = new PIXI.Application(props.width, props.height, { ...defaultProps, ...props.options, forceCanvas })
+    const parent = document.getElementById(props.parent)
     if (parent) {
       parent.appendChild(this._app.view)
     }
@@ -31,6 +32,11 @@ export class DBPlayer {
         url: '',
         width: 0,
         height: 0,
+        parent: '',
+        armature: '',
+        movement: '',
+        offsetX: 0,
+        offsetY: 0,
       }
     }
     const newProps = { ...this._curtProps, ...props }
@@ -47,6 +53,8 @@ export class DBPlayer {
       || newProps.loop !== this._curtProps.loop
       || newProps.width !== this._curtProps.width
       || newProps.height !== this._curtProps.height
+      || newProps.offsetX !== this._curtProps.offsetX
+      || newProps.offsetY !== this._curtProps.offsetY
     ) {
       needChangeStatus = true
     }
@@ -65,8 +73,8 @@ export class DBPlayer {
 
   private playComplete(): void {
     this.stopCurtMovie()
-    if (this._curtProps && this._curtProps.onPlayComplete) {
-      this._curtProps.onPlayComplete()
+    if (this._curtProps && this._curtProps.onComplete) {
+      this._curtProps.onComplete()
     }
   }
 
@@ -116,9 +124,9 @@ export class DBPlayer {
 
   private changeStatus(): void {
     if (this._movie) {
-      const { movement, isPlay, width, height } = this._curtProps
+      const { movement, isPlay, width, height, offsetX, offsetY } = this._curtProps
       this._movie.curtMovement = movement
-      this._movie.fitSize(width, height)
+      this._movie.fitSize(width, height, offsetX, offsetY)
       if (isPlay) {
         this.playCurtMovie()
       } else {
@@ -138,6 +146,7 @@ export class DBPlayer {
         const item = await PixiSkItem.loadUrl(url)
         this.realCreate(item)
       } catch (e) {
+        console.error(e)
         this.realCreate(null)
       }
     }

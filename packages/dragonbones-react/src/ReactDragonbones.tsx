@@ -11,14 +11,11 @@ export class ReactDragonBones extends React.PureComponent<IProps> {
 
   static propTypes = {
     url: PropTypes.string.isRequired,
+    parent: PropTypes.string.isRequired
   }
 
-  private _ref: HTMLDivElement
-
-  private setRef = (r: HTMLDivElement) => this._ref = r
-
   componentDidMount() {
-    this._player = new DBPlayer(this._ref, this.props)
+    this._player = new DBPlayer(this.props)
   }
 
   componentWillUnmount() {
@@ -35,10 +32,6 @@ export class ReactDragonBones extends React.PureComponent<IProps> {
   }
 
   render() {
-    return (
-      <div style={this.props.styles} ref={this.setRef}></div>
-    )
+    return null
   }
 }
-
-export default ReactDragonBones

@@ -7,7 +7,7 @@ export class PixiSkMovie extends SkMovie {
     return this._display
   }
 
-  public fitSize(width: number, height: number, center: boolean = true) {
+  public fitSize(width: number, height: number, offsetX?: number, offsetY?: number) {
     const target = this.display
     if (!target) return
     let scale = 1
@@ -21,10 +21,11 @@ export class PixiSkMovie extends SkMovie {
       scale = width / w
     }
     target.scale.set(scale, scale)
-    if (center) {
-      const bounds = target.getBounds()
-      target.x = (width - bounds.width) * 0.5
-      target.y = (height - bounds.height) * 0.5
+    if (!isNaN(offsetX)) {
+      target.x = offsetX
+    }
+    if (!isNaN(offsetY)) {
+      target.y = offsetY
     }
   }
 
