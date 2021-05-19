@@ -5,7 +5,7 @@
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config config/webpack.dev.conf.js --host 0.0.0.0",
+    "start": "webpack-dev-server --inline --progress --config config/webpack.dev.conf.js --host 0.0.0.0",
     "build": "webpack --progress --config config/webpack.prod.conf.js"
   },
   "author": "",
@@ -29,7 +29,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "@gnoijli/dragonbones-pixi4": "^1.0.0",
+    "@gnoijli/dragonbones-pixi4": "^1.0.2",
     "pixi.js": "^4.8.9"
   }
 }

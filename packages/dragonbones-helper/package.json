@@ -1,6 +1,6 @@
 {
   "name": "@gnoijli/dragonbones-helper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "helper for load and parse dragonbones zip file",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,9 @@
     "build": "rimraf ./build && tsc -p .",
     "prepare": "npm run build"
   },
-  "keywords": ["dragonbones"],
+  "keywords": [
+    "dragonbones"
+  ],
   "author": "gnoijli <gnoijli@gmail.com>",
   "homepage": "https://github.com/Tri-body/dragonbones-packages#readme",
   "license": "MIT",
@@ -18,14 +20,10 @@
   },
   "devDependencies": {
     "rimraf": "^3.0.2",
-    "typescript": "^4.2.4",
-    "dragonbones-converter": "^1.0.2",
-    "dragonbonesjs-module": "^1.0.1",
-    "jszip": "^3.6.0",
-    "tslib": "^2.2.0"
+    "typescript": "^4.2.4"
   },
-  "peerDependencies": {
-    "dragonbones-converter": "^1.0.2",
+  "dependencies": {
+    "dragonbones-converter": "^1.0.4",
     "dragonbonesjs-module": "^1.0.1",
     "jszip": "^3.6.0",
     "tslib": "^2.2.0"
