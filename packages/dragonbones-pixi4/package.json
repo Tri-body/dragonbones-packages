@@ -1,6 +1,6 @@
 {
   "name": "@gnoijli/dragonbones-pixi4",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "dragonbones render by pixi.js v4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

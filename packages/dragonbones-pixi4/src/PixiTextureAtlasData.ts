@@ -57,10 +57,20 @@ export class PixiTextureAtlasData extends TextureAtlasData {
     if (this._renderTexture !== null) {
       for (let k in this.textures) {
         const textureData = this.textures[k] as PixiTextureData
+        const { region } = textureData
+        // fix invalid texture region
+        if (region.x + region.width > this._renderTexture.width) {
+          console.warn(`texture fault x: ${region.x} + ${region.width} = ${region.x + region.width} > ${this._renderTexture.width}`)
+          region.width = this._renderTexture.width - region.x
+        }
+        if (region.y + region.height > this._renderTexture.height) {
+          console.warn(`texture fault y: ${region.y} + ${region.height} = ${region.y + region.height} > ${this._renderTexture.height}`)
+          region.height = this._renderTexture.height - region.y
+        }
         textureData.renderTexture = new PIXI.Texture(
           this._renderTexture,
-          <any> textureData.region as PIXI.Rectangle, // No need to set frame.
-          <any> textureData.region as PIXI.Rectangle,
+          <any> region as PIXI.Rectangle, // No need to set frame.
+          <any> region as PIXI.Rectangle,
           new PIXI.Rectangle(0, 0, textureData.region.width, textureData.region.height),
           textureData.rotated as any // .d.ts bug
         )
