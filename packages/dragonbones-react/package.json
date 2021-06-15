@@ -1,6 +1,6 @@
 {
   "name": "@gnoijli/dragonbones-react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "react component for show dragonbones, render by pixi",
   "author": "gnoijli <gnoijli@gmail.com>",
   "homepage": "https://github.com/Tri-body/dragonbones-packages#readme",
@@ -29,7 +29,7 @@
     "typescript": "^4.2.4"
   },
   "dependencies": {
-    "@gnoijli/dragonbones-pixi4": "^1.0.2",
+    "@gnoijli/dragonbones-pixi4": "^1.0.3",
     "csstype": "^3.0.8",
     "pixi.js": "^4.8.9",
     "react": "^16.14.0",

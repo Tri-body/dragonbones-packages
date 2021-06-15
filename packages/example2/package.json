@@ -15,7 +15,7 @@
     "react-scripts": "^4.0.3"
   },
   "dependencies": {
-    "@gnoijli/dragonbones-react": "^1.0.2"
+    "@gnoijli/dragonbones-react": "^1.0.3"
   },
   "browserslist": {
     "production": [

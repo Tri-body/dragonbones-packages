@@ -29,7 +29,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "@gnoijli/dragonbones-pixi4": "^1.0.2",
+    "@gnoijli/dragonbones-pixi4": "^1.0.3",
     "pixi.js": "^4.8.9"
   }
 }
