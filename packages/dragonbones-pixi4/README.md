@@ -1,9 +1,20 @@
-/// <reference path="../typings/index.d.ts" />
-import { PixiSkItem } from '@gnoijli/dragonbones-pixi4'
-import * as dragon from './assets/dragon.zip'
-import * as PIXI from 'pixi.js'
+## `dragonbones-pixi4`
 
-async function start() {
+>  dragonbones render by pixi.js v4
+
+#### Usage
+
+```sh
+npm i @gnoijli/dragonbones-pixi4
+```
+
+```js
+
+import { PixiSkItem } from '@gnoijli/dragonbones-pixi4'
+import * as PIXI from 'pixi.js'
+import * as dragon from './assets/dragon.zip'
+
+async function init() {
   const item = await PixiSkItem.loadUrl(dragon)
   for (let i = 0; i < 1; i++) {
     const movie = item.createMovie('Dragon')
@@ -33,7 +44,8 @@ async function start() {
 }
 
 window.onload = function () {
-  start().catch(r => {
-    console.warn(r)
-  })
+  init()
 }
+
+```
+
